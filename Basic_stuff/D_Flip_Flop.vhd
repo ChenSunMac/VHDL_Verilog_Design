@@ -13,8 +13,10 @@ begin
 process(clk)
 begin
 if (res ='1')then q<='0';
-elsif clk'event and clk='1'
+elsif clk'event and clk='1' // equivalent to rising_edge(signal)
+
 then q<=d;
+
 end if;
 end process;
 end Behavioral;
