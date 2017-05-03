@@ -1,0 +1,21 @@
+// 8 to 3 encoder
+
+entity encoder8to3 is
+	port(
+	    din: in std_logic_vector(7 downto 0);
+	    dout: out std_logic_vector (2 downto 0)
+	    );
+end encoder8to3;
+
+architecture behavior of encoder8to3 is 
+
+begin
+dout <= "000" when (din="10000000") else
+"001" when (din="01000000") else
+"010" when (din="00100000") else
+"011" when (din="00010000") else
+"100" when (din="00001000") else
+"101" when (din="00000100") else
+"110" when (din="00000010") else
+"111";
+end behavior
